@@ -78,6 +78,16 @@
 			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
 		fi \
 	}; f"
+ 
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	sm = submodule
+	who = shortlog -s --
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	cis = shortlog --numbered --summary
+	fer = "!sh -c 'git for-each-ref --sort=-committerdate \"refs/heads/\" --format=\"%(HEAD) %(color:yellow)%(refname:short)%(color:reset)|%(color:bold red)%(objectname:short) %(color:bold green)(%(committerdate:relative)) %(color:blue)%(authorname)%0a %(color:black) %(color:reset)|%(contents:subject)%0a |\" | column -ts \"|\" | less \"--tabs=4 --quit-if-one-screen --RAW-CONTROL-CHARS --no-init\"' - "
 
 [apply]
 

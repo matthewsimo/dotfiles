@@ -160,16 +160,6 @@ function getcertnames() {
 	fi;
 }
 
-# `s` with no arguments opens the current directory in Sublime Text, otherwise
-# opens the given location
-function s() {
-	if [ $# -eq 0 ]; then
-		subl .;
-	else
-		subl "$@";
-	fi;
-}
-
 # `v` with no arguments opens the current directory in Vim, otherwise opens the
 # given location
 function v() {
@@ -197,3 +187,93 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# intuitive git clone
+function clone() {
+
+  local url=$1;
+
+  local repo=$2;
+
+  local target=$3;
+
+  local gitURL='git@github.com';
+
+  local gitUser='matthewsimo';
+
+
+
+  if [[ ${url:0:4} == 'http' || ${url:0:3} == 'git' ]]
+
+  then
+
+    # just clone this thing.
+
+    repo=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
+
+		target=$repo;
+
+  elif [[ -z $target ]]
+
+  then
+
+    # set repo name as target
+
+    target=$repo;
+
+    repo=$url;
+
+    url="$gitURL:$gitUser/$repo.git";
+
+  elif [[ -z $repo ]]
+
+  then
+
+    # my own stuff.
+
+    repo=$url;
+
+    url="$gitURL:$gitUser/$repo.git";
+
+  else
+
+    # not my own, but I know whose it is.
+
+    url="$gitURL:$url/$repo.git";
+
+  fi
+
+
+
+  git clone $url $target && cd $target;
+
+}
+
+
+# goto path item in boom list 'p' -  $ gt ...
+function gt() {
+
+  local item=$1;
+
+  if [[ ${item} == '--list' || ${item} == '-l' ]]
+  then
+    $(echo 'You can go to:');
+    boom p;
+  else
+    cd $(boom echo $item);
+  fi
+
+}
+
+
+
+# save current directory to boom list p with id passed in
+function save() {
+
+  local id=$1;
+  local place=$(pwd);
+  boom p $id $place;
+
+}
+
+
