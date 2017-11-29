@@ -1,7 +1,6 @@
-﻿// Future versions of Hyper may add additional config options,
+// Future versions of Hyper may add additional config options,
 // which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.
-
 module.exports = {
   config: {
     // Choose either "stable" for receiving highly polished,
@@ -18,7 +17,7 @@ module.exports = {
     cursorColor: 'rgba(248,28,229,0.8)',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
-    cursorShape: 'BLOCK',
+    cursorShape: 'BLOCK'
 
     // set to true for blinking cursor
     cursorBlink: false,
