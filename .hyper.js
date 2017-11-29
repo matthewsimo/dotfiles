@@ -1,6 +1,7 @@
 // Future versions of Hyper may add additional config options,
 // which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.
+
 module.exports = {
   config: {
     // Choose either "stable" for receiving highly polished,
@@ -17,7 +18,7 @@ module.exports = {
     cursorColor: 'rgba(248,28,229,0.8)',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
-    cursorShape: 'BLOCK'
+    cursorShape: 'BLOCK',
 
     // set to true for blinking cursor
     cursorBlink: false,
@@ -93,7 +94,7 @@ module.exports = {
     env: {},
 
     // set to false for no bell
-    bell: false,
+    bell: 'SOUND',
 
     // if true, selected text will automatically be copied to the clipboard
     copyOnSelect: false
@@ -114,7 +115,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-solarized-dark"],
+  plugins: ['hyperterm-solarized-dark'],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
