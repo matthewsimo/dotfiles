@@ -27,6 +27,9 @@ fi
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
 
+# List all 
+alias ll="ls -lGA ${colorflag}"
+
 # List all files colorized in long format, including dot files
 alias la="ls -laF ${colorflag}"
 
@@ -149,3 +152,9 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+alias tasks="vim ~/tasks.md"
+
+alias spc='emacs'
+
+alias v='vim'
