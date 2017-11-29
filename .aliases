@@ -156,7 +156,7 @@ alias path='echo -e ${PATH//:/\\n}'
 alias tasks="vim ~/tasks.md"
 
 
-alias emacs="emacs.exe -q -l ~/.emacs.d/init.el"
+alias emacs="emacs.exe"
 alias spc='emacs'
 
 alias v='vim'
