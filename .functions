@@ -204,46 +204,33 @@ function clone() {
 
 
   if [[ ${url:0:4} == 'http' || ${url:0:3} == 'git' ]]
-
   then
 
     # just clone this thing.
-
     repo=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
-
 		target=$repo;
 
   elif [[ -z $target ]]
-
   then
 
     # set repo name as target
-
     target=$repo;
-
     repo=$url;
-
     url="$gitURL:$gitUser/$repo.git";
 
   elif [[ -z $repo ]]
-
   then
 
     # my own stuff.
-
     repo=$url;
-
     url="$gitURL:$gitUser/$repo.git";
 
   else
 
     # not my own, but I know whose it is.
-
     url="$gitURL:$url/$repo.git";
 
   fi
-
-
 
   git clone $url $target && cd $target;
 
