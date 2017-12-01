@@ -98,6 +98,7 @@ values."
      javascript
      html
      markdown
+     rust
      ;; react
      ;; php
      shaders
