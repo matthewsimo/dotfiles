@@ -159,12 +159,3 @@ alias spc='emacs'
 alias vim='spc'
 alias v='spc'
 
-
-#map rust commands to non .exe versions
-alias cargo="cargo.exe"
-alias rls="rls.exe"
-alias rustc="rustc.exe"
-alias rustdoc="rustdoc.exe"
-alias rust-gdb="rust-gdb.exe"
-alias rust-lldb="rust-lldb.exe"
-alias rustup="rustup.exe"
