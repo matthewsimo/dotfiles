@@ -154,8 +154,7 @@ alias path='echo -e ${PATH//:/\\n}'
 alias tasks="spc ~/tasks.md"
 
 # remap editor commands
-alias emacs="emacs.exe"
+alias v='vim'
+alias emacs='runemacs.exe'
 alias spc='emacs'
 alias vim='spc'
-alias v='spc'
-
