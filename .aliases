@@ -151,10 +151,7 @@ alias reload="exec ${SHELL} -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-alias tasks="spc ~/tasks.md"
-
 # remap editor commands
 alias v='vim'
 alias emacs='runemacs.exe'
 alias spc='emacs'
-alias vim='spc'
