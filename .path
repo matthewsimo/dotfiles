@@ -1,2 +1,4 @@
 
-export PATH="$HOME/apache-maven-3.8.2/bin:$PATH";
+PATH="$HOME/apache-maven-3.8.2/bin:$PATH";
+PATH="$PATH:~/.emacs.d/bin"
+export PATH
