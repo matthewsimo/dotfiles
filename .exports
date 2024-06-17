@@ -44,6 +44,17 @@ export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="/Users/matthewsimo/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+export ANDROID_HOME=$HOME/Library/Android/sdk
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
+export NODE_EXTRA_CA_CERTS=$HOME/.zscaler/ZscalerRootCertificate-2048-SHA256.cer
+
+export PNPM_HOME="/Users/matthewsimo/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+export COMMERCE_ENDPOINT=https://mcstaging.trex.com/graphql

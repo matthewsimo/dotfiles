@@ -78,7 +78,7 @@
 			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
 		fi \
 	}; f"
- 
+
 	st = status
 	ci = commit
 	co = checkout
@@ -195,3 +195,7 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[user]
+name = "Matthew Simo"
+email = "matthewsimo@rightpoint.com"
