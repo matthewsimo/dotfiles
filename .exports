@@ -49,7 +49,7 @@ export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
-export NODE_EXTRA_CA_CERTS=$HOME/.zscaler/ZscalerRootCertificate-2048-SHA256.cer
+export NODE_EXTRA_CA_CERTS=$HOME/.zscaler/ZscalerRootCertificate-2048-SHA256.pem
 
 export PNPM_HOME="/Users/matthewsimo/Library/pnpm"
 case ":$PATH:" in
