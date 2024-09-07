@@ -1,6 +1,12 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+
+export PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:${PATH}"
+export PATH="$PATH:/Users/matthewsimo/.modular/bin"
+
+export PATH="$PATH:~/.config/emacs/bin"
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
