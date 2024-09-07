@@ -1,0 +1,31 @@
+
+PATH="$HOME/bin:$PATH";
+PATH="/Library/Frameworks/Python.framework/Versions/3.11/bin:${PATH}";
+PATH="$PATH:/Users/matthewsimo/.modular/bin";
+PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH";
+PATH="$PATH:~/.config/emacs/bin";
+PATH="/opt/homebrew/sbin:$PATH"
+
+BREW_INSTALL="/opt/homebrew/bin"
+PATH="$BREW_INSTALL:$PATH"
+
+BUN_INSTALL="/Users/matthewsimo/.bun"
+PATH="$BUN_INSTALL/bin:$PATH"
+
+# ZIG_INSTALL="/Users/matthewsimo/zig/zig-macos-aarch64-0.9.0-dev.1815+20e19e75f"
+# ZIG_INSTALL="~/zig/zig-macos-aarch64-0.8.0"
+# ZIG_INSTALL="~/zig/zig-macos-aarch64-0.9.0"
+# ZIG_INSTALL="~/zig/zig-macos-aarch64-0.9.1"
+ZIG_INSTALL="~/zig/zig-macos-aarch64-0.12.0-dev.1769+bf5ab5451"
+PATH="$PATH:$ZIG_INSTALL"
+
+RUST_INSTALL="~/.cargo/bin"
+PATH="$PATH:$RUST_INSTALL"
+
+LLVM12_INSTALL="/opt/homebrew/opt/llvm@12/bin"
+PATH="$LLVM12_INSTALL:$PATH"
+
+ROC_INSTALL="~/projects/roc/target/debug"
+PATH="$PATH:$ROC_INSTALL"
+
+export PATH;
