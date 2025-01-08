@@ -1,0 +1,11 @@
+
+theme = iTerm2 Solarized Dark
+
+# Font
+font-size = 16
+font-family = FiraCode Nerd Font Mono Med
+
+
+# Keybindings
+keybind = global:cmd+shift+`=toggle_visibility
+keybind = super+backspace=text:\x15
