@@ -100,6 +100,7 @@ brew install ripgrep
 brew install neovim
 brew install luarocks
 brew install lazygit
+brew install fzf
 
 # Remove outdated versions from the cellar.
 brew cleanup
