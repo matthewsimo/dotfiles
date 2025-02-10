@@ -227,32 +227,28 @@ function clone() {
 
         fi
 
-        git clone $url $target && cd $target
+        git clone $url $target && "cd $target || exit"
 
 }
 
-# # goto path item in boom list 'p' -  $ gt ...
-#function gt() {
-#
-#  local item=$1;
-#
-#  if [[ ${item} == '--list' || ${item} == '-l' ]]
-#  then
-#    $(echo 'You can go to:');
-#    boom p;
-#  else
-#    cd $(boom echo $item);
-#  fi
-#
-#}
-#
-#
-#
-## save current directory to boom list p with id passed in
-#function save() {
-#
-#  local id=$1;
-#  local place=$(pwd);
-#  boom p $id $place;
-#
-#}
+# goto path item in b list 'p' -  $ gt
+function gt() {
+
+        local item=$1
+
+        if [[ ${item} == '--list' || ${item} == '-l' ]]; then
+                echo "You can go to:"
+                eval "b p -l"
+        else
+                cd $(b p "$item" -e)
+        fi
+
+}
+
+# save current directory to b list p with id passed in
+function save() {
+
+        local id=$1
+        "b p $id $(pwd)"
+
+}
