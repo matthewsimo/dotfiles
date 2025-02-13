@@ -227,7 +227,7 @@ function clone() {
 
         fi
 
-        git clone $url $target && "cd $target || exit"
+        git clone "$url" "$target" && cd "$target" || exit
 
 }
 

@@ -27,10 +27,10 @@ brew install bash
 brew install bash-completion2
 
 # Switch to using brew-installed bash as default shell
-if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-        echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells
-        chsh -s "${BREW_PREFIX}/bin/bash"
-fi
+#if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
+#        echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells
+#        chsh -s "${BREW_PREFIX}/bin/bash"
+#fi
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
@@ -41,7 +41,7 @@ brew install gnupg
 # Install more recent versions of some macOS tools.
 brew install vim --with-override-system-vi
 brew install grep
-brew install openssh
+#brew install openssh
 brew install screen
 brew install php
 brew install gmp
@@ -100,6 +100,9 @@ brew install ripgrep
 brew install neovim
 brew install luarocks
 brew install lazygit
+brew install fzf
+brew install bitwarden
+brew install neofetch
 
 # Remove outdated versions from the cellar.
 brew cleanup
